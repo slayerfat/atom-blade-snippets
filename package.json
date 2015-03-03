@@ -6,7 +6,7 @@
   "activationCommands": {
     "atom-workspace": "blade-snippets:toggle"
   },
-  "repository": "https://github.com/atom/blade-snippets",
+  "repository": "https://github.com/slayerfat/atom-blade-snippets",
   "license": "MIT",
   "engines": {
     "atom": ">=0.174.0 <2.0.0"

@@ -1,3 +1,3 @@
 ## 0.1.0 - First Release
-* Every feature added
-* Every bug fixed
+* initial commit
+* fixed some of the errors in the conversion
