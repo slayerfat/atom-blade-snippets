@@ -1,0 +1,16 @@
+{
+  "name": "blade-snippets",
+  "main": "./lib/blade-snippets",
+  "version": "0.0.0",
+  "description": "Laravel 5 blade snippets! useful snippets for the blade templating engine.",
+  "activationCommands": {
+    "atom-workspace": "blade-snippets:toggle"
+  },
+  "repository": "https://github.com/atom/blade-snippets",
+  "license": "MIT",
+  "engines": {
+    "atom": ">=0.174.0 <2.0.0"
+  },
+  "dependencies": {
+  }
+}

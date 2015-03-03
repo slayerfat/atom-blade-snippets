@@ -1,0 +1,101 @@
+'.text.html.php.blade':
+
+  'blade-action':
+    'prefix': 'action'
+    'body': '{!! link_to_action(\'${0:Controller@method}\') !!}'
+
+  'blade-asset':
+    'prefix': 'asset'
+    'body': '{!! asset(\'${0:path}\') !!}'
+
+  'blade-choice':
+    'prefix': 'choice'
+    'body': '@choice(\'${1:language.line}\', ${2:number})'
+
+  'blade-comment':
+    'prefix': 'comment'
+    'body': '{{-- ${0:comment} --}}'
+
+  'blade-each':
+    'prefix': 'each'
+    'body': '@each (\'${1:item.view}\', ${2:\$items}, \'${3:item}\', \'${4:empty.view}\')$0'
+
+  'blade-expr':
+    'prefix': '}}'
+    'body': '{{ ${0:expression} }}'
+
+  'blade-extends':
+    'prefix': 'ext'
+    'body': '@extends(\'${1:view}\')$0'
+
+  'blade-for':
+    'prefix': 'for'
+    'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t{{${6:-- expr --}}}\n@endfor$0'
+
+  'blade-fore':
+    'prefix': 'fore'
+    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@empty\n\t{{${4:-- empty expr --}}}\n@endforelse$0'
+
+  'blade-foreach':
+    'prefix': 'foreach'
+    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@endforeach$0'
+
+  'blade-if_else':
+    'prefix': 'ife'
+    'body': '@if (${1:condition})\n\t{{${2:-- true expr --}}}\n@else\n\t{{${3:-- false expr --}}}\n@endif$0'
+
+  'blade-if':
+    'prefix': 'if'
+    'body': '@if (${1:condition})\n\t{{${2:-- expr --}}}\n@endif$0'
+
+  'blade-include':
+    'prefix': 'inc'
+    'body': '@include(\'${1:view.name}\'${2:, [${3:\'some\'} => ${4:\'data\'}]})$0'
+
+  'blade-lang':
+    'prefix': 'lang'
+    'body': '@lang(\'${1:language.line}\'${2:, [${3:\'variable\'} => ${4:\'replacement\'}]})'
+
+  'blade-layout-section':
+    'prefix': 'lsec'
+    'body': '@section(\'${1:name}\')\n\t{{ ${2:expr} }}\n@show$0'
+
+  'blade-layout':
+    'prefix': 'lay'
+    'body': '@layout(\'${1:name}\')$0'
+
+  'blade-parent':
+    'prefix': 'par'
+    'body': '@parent'
+
+  'blade-route':
+    'prefix': 'route'
+    'body': '{!! route(\'${0:name}\') !!}'
+
+  'blade-section_yield':
+    'prefix': 'secy'
+    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@yield_section$0'
+
+  'blade-section':
+    'prefix': 'sec'
+    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@stop$0'
+
+  'blade-trans':
+    'prefix': 'trans'
+    'body': '{!! trans(\'${0:language.line}\') !!}'
+
+  'blade-unless':
+    'prefix': 'unless'
+    'body': '@unless (${1:condition})\n\t{{${2:-- expr --}}}\n@endunless$0'
+
+  'blade-var':
+    'prefix': '!!'
+    'body': '{!! ${0:\$var} !!}'
+
+  'blade-while':
+    'prefix': 'while'
+    'body': '@while (${1:condition})\n\t{{${2:-- expr --}}}\n@endwhile$0'
+
+  'blade-yield':
+    'prefix': 'yl'
+    'body': '@yield(\'${1:name}\'${2:, \'${3:default}\'})$0'
