@@ -99,3 +99,11 @@
   'blade-yield':
     'prefix': 'yl'
     'body': '@yield(\'${1:name}\'${2:, \'${3:default}\'})$0'
+
+  'blade-inject-inject':
+    'prefix': 'inject'
+    'body': '@inject(\'${1:viewComposer}\'${2:, \'${3:YourServiceClass}\'})$0'
+
+  'blade-inject-inj':
+    'prefix': 'inj'
+    'body': '@inject(\'${1:viewComposer}\'${2:, \'${3:YourServiceClass}\'})$0'
