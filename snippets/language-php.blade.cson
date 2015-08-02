@@ -1,101 +1,157 @@
 '.text.html.php.blade':
 
-  'blade-action':
+  'blade-action-action':
     'prefix': 'action'
     'body': '{!! link_to_action(\'${0:Controller@method}\') !!}'
 
-  'blade-asset':
+  'blade-asset-asset':
     'prefix': 'asset'
     'body': '{!! asset(\'${0:path}\') !!}'
 
-  'blade-choice':
+  'blade-choice-choice':
     'prefix': 'choice'
     'body': '@choice(\'${1:language.line}\', ${2:number})'
 
-  'blade-comment':
+  'blade-comment-comment':
     'prefix': 'comment'
     'body': '{{-- ${0:comment} --}}'
 
-  'blade-each':
+  'blade-comment-//':
+    'prefix': '//'
+    'body': '{{-- ${0:comment} --}}'
+
+  'blade-each-each':
     'prefix': 'each'
     'body': '@each (\'${1:item.view}\', ${2:\$items}, \'${3:item}\', \'${4:empty.view}\')$0'
 
-  'blade-expr':
+  'blade-escaped-}}':
     'prefix': '}}'
-    'body': '{{ ${0:expression} }}'
+    'body': '{{ ${0:\$var} }}'
 
-  'blade-extends':
+  'blade-escaped-echo':
+    'prefix': 'echo'
+    'body': '{{ ${0:\$var} }}'
+
+  'blade-escaped-print':
+    'prefix': 'print'
+    'body': '{{ ${0:\$var} }}'
+
+  'blade-unescaped-!!':
+    'prefix': '!!'
+    'body': '{!! ${0:\$var} !!}'
+
+  'blade-unescaped-echo':
+    'prefix': 'uecho'
+    'body': '{!! ${0:\$var} !!}'
+
+  'blade-unescaped-print':
+    'prefix': 'uprint'
+    'body': '{!! ${0:\$var} !!}'
+
+  'blade-extends-ext':
     'prefix': 'ext'
     'body': '@extends(\'${1:view}\')$0'
 
-  'blade-for':
+  'blade-extends-extends':
+    'prefix': 'extends'
+    'body': '@extends(\'${1:view}\')$0'
+
+  'blade-for-for':
     'prefix': 'for'
-    'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t{{${6:-- expr --}}}\n@endfor$0'
+    'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t${6:}\n@endfor$0'
 
-  'blade-fore':
-    'prefix': 'fore'
-    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@empty\n\t{{${4:-- empty expr --}}}\n@endforelse$0'
+  'blade-forelse-fore':
+    'prefix': 'fel'
+    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
 
-  'blade-foreach':
+  'blade-forelse-forelse':
+    'prefix': 'forelse'
+    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
+
+  'blade-foreach-foreach':
     'prefix': 'foreach'
-    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@endforeach$0'
+    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
 
-  'blade-if_else':
+  'blade-foreach-forea':
+    'prefix': 'fea'
+    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
+
+  'blade-if_else-ife':
     'prefix': 'ife'
-    'body': '@if (${1:condition})\n\t{{${2:-- true expr --}}}\n@else\n\t{{${3:-- false expr --}}}\n@endif$0'
+    'body': '@if (${1:condition})\n\t${2:}\n@else\n\t${3:}\n@endif$0'
 
-  'blade-if':
+  'blade-if-if':
     'prefix': 'if'
-    'body': '@if (${1:condition})\n\t{{${2:-- expr --}}}\n@endif$0'
+    'body': '@if (${1:condition})\n\t${2:}\n@endif$0'
 
-  'blade-include':
+  'blade-include-inc':
     'prefix': 'inc'
+    'body': '@include(\'${1:view.name}\'${2:, [${3:\'some\'} => ${4:\'data\'}]})$0'
+
+  'blade-include-include':
+    'prefix': 'include'
     'body': '@include(\'${1:view.name}\'${2:, [${3:\'some\'} => ${4:\'data\'}]})$0'
 
   'blade-lang':
     'prefix': 'lang'
     'body': '@lang(\'${1:language.line}\'${2:, [${3:\'variable\'} => ${4:\'replacement\'}]})'
 
-  'blade-layout-section':
-    'prefix': 'lsec'
-    'body': '@section(\'${1:name}\')\n\t{{ ${2:expr} }}\n@show$0'
-
-  'blade-layout':
-    'prefix': 'lay'
-    'body': '@layout(\'${1:name}\')$0'
-
-  'blade-parent':
+  'blade-parent-par':
     'prefix': 'par'
+    'body': '@parent'
+
+  'blade-parent-parent':
+    'prefix': 'parent'
     'body': '@parent'
 
   'blade-route':
     'prefix': 'route'
     'body': '{!! route(\'${0:name}\') !!}'
 
-  'blade-section_yield':
-    'prefix': 'secy'
-    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@yield_section$0'
+  'blade-section-secs':
+    'prefix': 'secs'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@show$0'
 
-  'blade-section':
+  'blade-section-sshow':
+    'prefix': 'sshow'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@show$0'
+
+  'blade-section-sec':
     'prefix': 'sec'
-    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@stop$0'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
 
-  'blade-trans':
+  'blade-section-section':
+    'prefix': 'section'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
+
+  'blade-trans-trans':
     'prefix': 'trans'
     'body': '{!! trans(\'${0:language.line}\') !!}'
 
-  'blade-unless':
+  'blade-unless-unless':
     'prefix': 'unless'
-    'body': '@unless (${1:condition})\n\t{{${2:-- expr --}}}\n@endunless$0'
+    'body': '@unless (${1:condition})\n\t${2:}\n@endunless$0'
 
-  'blade-var':
-    'prefix': '!!'
-    'body': '{!! ${0:\$var} !!}'
+  'blade-unless-un':
+    'prefix': 'un'
+    'body': '@unless (${1:condition})\n\t${2:}\n@endunless$0'
 
-  'blade-while':
+  'blade-while-while':
     'prefix': 'while'
-    'body': '@while (${1:condition})\n\t{{${2:-- expr --}}}\n@endwhile$0'
+    'body': '@while (${1:condition})\n\t${2:}\n@endwhile$0'
 
-  'blade-yield':
+  'blade-yield-yl':
     'prefix': 'yl'
-    'body': '@yield(\'${1:name}\'${2:, \'${3:default}\'})$0'
+    'body': '@yield(\'${1:section}\')$0'
+
+  'blade-yield-yield':
+    'prefix': 'yield'
+    'body': '@yield(\'${1:section}\')$0'
+
+  'blade-inject-inject':
+    'prefix': 'inject'
+    'body': '@inject(\'${1:viewComposer}\'${2:, \'${3:YourServiceClass}\'})$0'
+
+  'blade-inject-inj':
+    'prefix': 'inj'
+    'body': '@inject(\'${1:viewComposer}\'${2:, \'${3:YourServiceClass}\'})$0'
