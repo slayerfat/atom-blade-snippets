@@ -20,9 +20,21 @@
     'prefix': 'each'
     'body': '@each (\'${1:item.view}\', ${2:\$items}, \'${3:item}\', \'${4:empty.view}\')$0'
 
-  'blade-expr':
+  'blade-escaped-}}':
     'prefix': '}}'
-    'body': '{{ ${0:expression} }}'
+    'body': '{{ ${0:\$var} }}'
+
+  'blade-escaped-echo':
+    'prefix': 'echo'
+    'body': '{{ ${0:\$var} }}'
+
+  'blade-escaped-print':
+    'prefix': 'print'
+    'body': '{{ ${0:\$var} }}'
+
+  'blade-unescaped-!!':
+    'prefix': '!!'
+    'body': '{!! ${0:\$var} !!}'
 
   'blade-extends':
     'prefix': 'ext'
@@ -30,23 +42,27 @@
 
   'blade-for':
     'prefix': 'for'
-    'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t{{${6:-- expr --}}}\n@endfor$0'
+    'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t${6:}\n@endfor$0'
 
   'blade-fore':
     'prefix': 'fore'
-    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@empty\n\t{{${4:-- empty expr --}}}\n@endforelse$0'
+    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
+
+  'blade-forelse':
+    'prefix': 'forelse'
+    'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
 
   'blade-foreach':
     'prefix': 'foreach'
-    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t{{${3:-- expr --}}}\n@endforeach$0'
+    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
 
   'blade-if_else':
     'prefix': 'ife'
-    'body': '@if (${1:condition})\n\t{{${2:-- true expr --}}}\n@else\n\t{{${3:-- false expr --}}}\n@endif$0'
+    'body': '@if (${1:condition})\n\t${2:}\n@else\n\t${3:}\n@endif$0'
 
   'blade-if':
     'prefix': 'if'
-    'body': '@if (${1:condition})\n\t{{${2:-- expr --}}}\n@endif$0'
+    'body': '@if (${1:condition})\n\t${2:}\n@endif$0'
 
   'blade-include':
     'prefix': 'inc'
@@ -55,10 +71,6 @@
   'blade-lang':
     'prefix': 'lang'
     'body': '@lang(\'${1:language.line}\'${2:, [${3:\'variable\'} => ${4:\'replacement\'}]})'
-
-  'blade-layout-section':
-    'prefix': 'lsec'
-    'body': '@section(\'${1:name}\')\n\t{{ ${2:expr} }}\n@show$0'
 
   'blade-layout':
     'prefix': 'lay'
@@ -72,13 +84,13 @@
     'prefix': 'route'
     'body': '{!! route(\'${0:name}\') !!}'
 
-  'blade-section_yield':
-    'prefix': 'secy'
-    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@yield_section$0'
+  'blade-section-show':
+    'prefix': 'secs'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@show$0'
 
-  'blade-section':
+  'blade-section-sec':
     'prefix': 'sec'
-    'body': '@section(\'${1:name}\')\n\t{{${2:-- expr --}}}\n@stop$0'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
 
   'blade-trans':
     'prefix': 'trans'
@@ -86,15 +98,11 @@
 
   'blade-unless':
     'prefix': 'unless'
-    'body': '@unless (${1:condition})\n\t{{${2:-- expr --}}}\n@endunless$0'
-
-  'blade-var':
-    'prefix': '!!'
-    'body': '{!! ${0:\$var} !!}'
+    'body': '@unless (${1:condition})\n\t${2:}\n@endunless$0'
 
   'blade-while':
     'prefix': 'while'
-    'body': '@while (${1:condition})\n\t{{${2:-- expr --}}}\n@endwhile$0'
+    'body': '@while (${1:condition})\n\t${2:}\n@endwhile$0'
 
   'blade-yield':
     'prefix': 'yl'

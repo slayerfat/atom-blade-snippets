@@ -9,14 +9,14 @@ using the [sublime to atom](https://github.com/james2doyle/sublime-to-atom-snipp
 
 | Shortcut  | Result |
 |-----------|--------|
+| echo **or**	print **or** }}	| {{ `$var` }} |
+| !!		| {!! `$var` !!}	|
 | ext		| @extends('`name`') |
 | lay		| @layout('`name`')  |
 | sec		| @section('`name`') <br /> **{{-- expr --\}\}** <br /> @endsection    |
-| secy		| @section('`name`') <br /> **{{-- expr --\}\}** <br /> @yield_section |
 | yl		| @yield('`section`', '`default`') |
 | lsec		| @section('`name`') <br /> **{{-- expr --\}\}** <br /> @show |
 | par		| @parent	|
-| !!		| {!! $`var` !!}	|
 | inc		| @include('`view.name`', `['some' => 'data']`)  |
 | if		| @if (`condition`) <br /> **{{-- expr --\}\}** <br /> @endif   |
 | ife		| @if (`condition`) <br /> **{{-- expr --\}\}** <br /> @else <br /> **{{-- expr --\}\}** <br /> @endif  |
