@@ -11,9 +11,9 @@ These snippets will trigger only in `*.blade.php` files.
 
 Type any snippet and hit TAB to receive incredible results!.
 
-Checkout the [Available blade snippets.](#Available snippets)
+echo + TAB = {{ `$var` }}
 
-snippet: !! + TAB = incredible result: {!! `$var` !!}
+Checkout the [Available blade snippets.](#available-snippets)
 
 I recommend [this Blade language Package for Atom](https://atom.io/packages/language-blade) to be able to take full advantage of the Blade Templating Engine in this amazing editor.
 
@@ -23,27 +23,26 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 |-----------|--------|
 | **}}** _or_ **echo** _or_	**print**	| {{ `$var` }} |
 | **!!**	_or_ **uecho** _or_	**uprint** | {!! `$var` !!}	|
-| **ext**	_or_ **extends** | @extends('`name`')	|
 | **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
 | **sshow**	_or_ **secs** | @section('`name`') <br /><br /> @show |
+| **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
+| **ext**	_or_ **extends** | @extends('`name`')	|
 | **yl** _or_ **yield**	| @yield('`section`') |
 | **par**	_or_ **parent**	| @parent	|
-| inc		| @include('`view.name`', `['some' => 'data']`)  |
-| if		| @if (`condition`) <br /><br /> @endif   |
-| ife		| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
-| foreach	| @foreach(`$array` as `$element`) <br /><br /> @endforeach  |
-| fore		| @forelse (`$array` as `$element`) <br /><br /> @endforelse  |
-| for		| @for (`$i` = `0`; `$i` `<` `…`; `$i++`) <br /><br /> @endfor  |
-| each		| @each ('`item.view`', $`items`, '`item`', '`empty.view`')
-| trans		| {!! trans('`language.line`') !!}	|
-| route		| {!! route('`name`') !!}	|
-| asset		| {!! asset('`path`') !!}	|
-| action	| {!! link_to_action('`Controller@method`') !!}	|
-| while		| @while (`condition`) <br /><br /> @endwhile  |
-| unless	| @unless (`condition`) <br /><br /> @endunless  |
-| choice	| @choice('`language.line`', $`number`)  |
-| comment	| {{-- `comment` --}}	|
-| lang		| @lang('`language.line`', `['variable => 'replacement']`)  |
+| **if**	| @if (`condition`) <br /><br /> @endif   |
+| **ife**	| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
+| **for**		| @for (`$i` = `0`; `$i` `<` `…`; `$i++`) <br /><br /> @endfor  |
+| **while**		| @while (`condition`) <br /><br /> @endwhile  |
+| **un** _or_ **unless** | @unless (`condition`) <br /><br /> @endunless  |
+| **fea** _or_ **foreach** | @foreach(`$array` as `$element`) <br /><br /> @endforeach |
+| **fel** _or_ **forelse**| @forelse (`$array` as `$element`) <br /><br /> @endforelse  |
+| **each** | @each ('`item.view`', $`items`, '`item`', '`empty.view`')
+| **trans**		| {!! trans('`language.line`') !!}	|
+| **route**		| {!! route('`name`') !!}	|
+| **asset**		| {!! asset('`path`') !!}	|
+| **action**	| {!! link_to_action('`Controller@method`') !!}	|
+| **choice**	| @choice('`language.line`', $`number`)  |
+| **comment** _or_ **//**	| {{-- `comment` --}}	|
 
 
 ##Disclaimer

@@ -3,6 +3,7 @@
 * Added more aliases.
 * Removed `{{-- expr --}}` from the snippets.
 * Removed `@section {{-- exp --}} @yield`.
+* Removed `@lang`.
 * Removed `@layout`.
 * Updated readme.
 

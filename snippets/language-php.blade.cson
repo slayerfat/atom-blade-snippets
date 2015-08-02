@@ -1,22 +1,26 @@
 '.text.html.php.blade':
 
-  'blade-action':
+  'blade-action-action':
     'prefix': 'action'
     'body': '{!! link_to_action(\'${0:Controller@method}\') !!}'
 
-  'blade-asset':
+  'blade-asset-asset':
     'prefix': 'asset'
     'body': '{!! asset(\'${0:path}\') !!}'
 
-  'blade-choice':
+  'blade-choice-choice':
     'prefix': 'choice'
     'body': '@choice(\'${1:language.line}\', ${2:number})'
 
-  'blade-comment':
+  'blade-comment-comment':
     'prefix': 'comment'
     'body': '{{-- ${0:comment} --}}'
 
-  'blade-each':
+  'blade-comment-//':
+    'prefix': '//'
+    'body': '{{-- ${0:comment} --}}'
+
+  'blade-each-each':
     'prefix': 'each'
     'body': '@each (\'${1:item.view}\', ${2:\$items}, \'${3:item}\', \'${4:empty.view}\')$0'
 
@@ -52,32 +56,40 @@
     'prefix': 'extends'
     'body': '@extends(\'${1:view}\')$0'
 
-  'blade-for':
+  'blade-for-for':
     'prefix': 'for'
     'body': '@for (${1:\$i} = ${2:0}; ${1:\$i} ${4:<} ${3:$count}; ${5:${1:\$i}++})\n\t${6:}\n@endfor$0'
 
-  'blade-fore':
-    'prefix': 'fore'
+  'blade-forelse-fore':
+    'prefix': 'fel'
     'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
 
-  'blade-forelse':
+  'blade-forelse-forelse':
     'prefix': 'forelse'
     'body': '@forelse (${1:\$array} as ${2:\$element})\n\t${3:}\n@empty\n\t${4:}\n@endforelse$0'
 
-  'blade-foreach':
+  'blade-foreach-foreach':
     'prefix': 'foreach'
     'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
 
-  'blade-if_else':
+  'blade-foreach-forea':
+    'prefix': 'fea'
+    'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
+
+  'blade-if_else-ife':
     'prefix': 'ife'
     'body': '@if (${1:condition})\n\t${2:}\n@else\n\t${3:}\n@endif$0'
 
-  'blade-if':
+  'blade-if-if':
     'prefix': 'if'
     'body': '@if (${1:condition})\n\t${2:}\n@endif$0'
 
-  'blade-include':
+  'blade-include-inc':
     'prefix': 'inc'
+    'body': '@include(\'${1:view.name}\'${2:, [${3:\'some\'} => ${4:\'data\'}]})$0'
+
+  'blade-include-include':
+    'prefix': 'include'
     'body': '@include(\'${1:view.name}\'${2:, [${3:\'some\'} => ${4:\'data\'}]})$0'
 
   'blade-lang':
@@ -112,15 +124,19 @@
     'prefix': 'section'
     'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
 
-  'blade-trans':
+  'blade-trans-trans':
     'prefix': 'trans'
     'body': '{!! trans(\'${0:language.line}\') !!}'
 
-  'blade-unless':
+  'blade-unless-unless':
     'prefix': 'unless'
     'body': '@unless (${1:condition})\n\t${2:}\n@endunless$0'
 
-  'blade-while':
+  'blade-unless-un':
+    'prefix': 'un'
+    'body': '@unless (${1:condition})\n\t${2:}\n@endunless$0'
+
+  'blade-while-while':
     'prefix': 'while'
     'body': '@while (${1:condition})\n\t${2:}\n@endwhile$0'
 
