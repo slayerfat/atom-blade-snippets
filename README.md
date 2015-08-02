@@ -1,11 +1,23 @@
-# Blade templating snippets
+#Blade templating snippets for Atom
 
-Laravel 5 blade snippets! useful snippets for the blade templating engine.
+Laravel 5 blade snippets! useful snippets for the Blade Templating Engine to use in Atom.
 
 Converted from [blade-snippets for sublime](https://github.com/dev4dev/blade-snippets)
 using the [sublime to atom](https://github.com/james2doyle/sublime-to-atom-snippets) script.
 
-##Avalable snippets
+##Usage
+
+These snippets will trigger only in `*.blade.php` files.
+
+Type any snippet and hit TAB to receive incredible results!.
+
+Checkout the [Available blade snippets.](#Available snippets)
+
+snippet: !! + TAB = incredible result: {!! `$var` !!}
+
+I recommend [this Blade language Package for Atom](https://atom.io/packages/language-blade) to be able to take full advantage of the Blade Templating Engine in this amazing editor.
+
+##Available snippets
 
 | Shortcut  | Result |
 |-----------|--------|
