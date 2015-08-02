@@ -2,7 +2,9 @@
 * Added new `@inject` [Service Injection.](http://laravel.com/docs/5.1/blade#service-injection)
 * Added more aliases.
 * Removed `{{-- expr --}}` from the snippets.
-* Removed secy.
+* Removed `@section {{-- exp --}} @yield`.
+* Removed `@layout`.
+* Updated readme.
 
 ## 0.1.0 - First Release
 * initial commit.
