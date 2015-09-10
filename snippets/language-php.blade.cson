@@ -161,8 +161,8 @@
     'body': """
       <!-- $2 form input -->
       <div class="$1">
-        {{!! Form::label('$2', '$3') !!}}
-        {{!! Form::text('$2', null, ['class'=>'$4']) !!}}
+        {!! Form::label('$2', '$3') !!}
+        {!! Form::text('$2', null, ['class'=>'$4']) !!}
       </div>
     """
 
@@ -171,7 +171,7 @@
     'body': """
       <!-- $2 form input -->
       <div class="$1">
-        {{!! Form::label('$2', '$3') !!}}
-        {{!! Form::textarea('$2', null, ['class'=>'$4']) !!}}
+        {!! Form::label('$2', '$3') !!}
+        {!! Form::textarea('$2', null, ['class'=>'$4']) !!}
       </div>
     """
