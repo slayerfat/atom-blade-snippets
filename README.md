@@ -43,6 +43,8 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **action**	| {!! link_to_action('`Controller@method`') !!}	|
 | **choice**	| @choice('`language.line`', $`number`)  |
 | **comment** _or_ **//**	| {{-- `comment` --}}	|
+| **textfield** | `<!-- $2 form input -->` <br /> `<div class="$1">` <br /> `{!! Form::label('$2', '$3') !!}` <br /> `{!! Form::text('$2', null, ['class'=>'$4']) !!}` <br /> `</div>` |
+| **textarea** | `<!-- $2 form input -->` <br /> `<div class="$1">` <br /> `{!! Form::label('$2', '$3') !!}` <br /> `{!! Form::textarea('$2', null, ['class'=>'$4']) !!}` <br /> `</div>` |
 
 
 ##Disclaimer
