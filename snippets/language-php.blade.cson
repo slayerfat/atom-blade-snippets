@@ -155,3 +155,23 @@
   'blade-inject-inj':
     'prefix': 'inj'
     'body': '@inject(\'${1:viewComposer}\'${2:, \'${3:YourServiceClass}\'})$0'
+
+  'blade-html-textfield':
+    'prefix': 'textfield'
+    'body': """
+      <!-- $2 form input -->
+      <div class="$1">
+        {!! Form::label('$2', '$3') !!}
+        {!! Form::text('$2', null, ['class'=>'$4']) !!}
+      </div>
+    """
+
+  'blade-html-textarea':
+    'prefix': 'textarea'
+    'body': """
+      <!-- $2 form input -->
+      <div class="$1">
+        {!! Form::label('$2', '$3') !!}
+        {!! Form::textarea('$2', null, ['class'=>'$4']) !!}
+      </div>
+    """
