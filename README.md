@@ -23,7 +23,7 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 |-----------|--------|
 | **}}** _or_ **echo** _or_	**print**	| {{ `$var` }} |
 | **!!**	_or_ **uecho** _or_	**uprint** | {!! `$var` !!}	|
-| **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
+| **sec**	_or_ **section** | @section('`name`') <br /><br /> @stop |
 | **sshow**	_or_ **secs** | @section('`name`') <br /><br /> @show |
 | **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
 | **ext**	_or_ **extends** | @extends('`name`')	|
