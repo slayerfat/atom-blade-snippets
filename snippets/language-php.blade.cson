@@ -118,11 +118,11 @@
 
   'blade-section-sec':
     'prefix': 'sec'
-    'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@stop$0'
 
   'blade-section-section':
     'prefix': 'section'
-    'body': '@section(\'${1:name}\')\n\t${2:}\n@endsection$0'
+    'body': '@section(\'${1:name}\')\n\t${2:}\n@stop$0'
 
   'blade-trans-trans':
     'prefix': 'trans'
