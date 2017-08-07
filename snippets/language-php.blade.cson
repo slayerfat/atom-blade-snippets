@@ -7,6 +7,10 @@
   'blade-asset-asset':
     'prefix': 'asset'
     'body': '{!! asset(\'${0:path}\') !!}'
+    
+  'blade-auth-auth':
+    'prefix': 'auth'
+    'body': '@auth (${1:gate})\n\t${2:}\n@endauth$0'
 
   'blade-choice-choice':
     'prefix': 'choice'
@@ -75,6 +79,10 @@
   'blade-foreach-forea':
     'prefix': 'fea'
     'body': '@foreach (${1:\$array} as ${2:\$element})\n\t${3:}\n@endforeach$0'
+    
+  'blade-guest-guest':
+    'prefix': 'guest'
+    'body': '@guest (${1:gate})\n\t${2:}\n@endguest$0'
 
   'blade-if_else-ife':
     'prefix': 'ife'
