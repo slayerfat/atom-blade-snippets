@@ -25,6 +25,7 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **}}** _or_ **echo** _or_	**print**	| {{ `$var` }} |
 | **action**	| {!! link_to_action('`Controller@method`') !!}	|
 | **asset**		| {!! asset('`path`') !!}	|
+| **auth**		| @auth('`gate`')<br /><br /> @endauth  |
 | **choice**	| @choice('`language.line`', $`number`)  |
 | **comment** _or_ **//**	| {{-- `comment` --}}	|
 | **each** | @each ('`item.view`', $`items`, '`item`', '`empty.view`')
@@ -32,6 +33,7 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **fea** _or_ **foreach** | @foreach(`$array` as `$element`) <br /><br /> @endforeach |
 | **fel** _or_ **forelse**| @forelse (`$array` as `$element`) <br /><br /> @endforelse  |
 | **for**		| @for (`$i` = `0`; `$i` `<` `…`; `$i++`) <br /><br /> @endfor  |
+| **guest**		| @guest('`gate`')<br /><br /> @endguest  |
 | **if**	| @if (`condition`) <br /><br /> @endif   |
 | **ife**	| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
 | **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
