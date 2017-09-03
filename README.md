@@ -37,6 +37,8 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **if**	| @if (`condition`) <br /><br /> @endif   |
 | **ife**	| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
 | **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
+| **incif**	_or_ **includeif** | @includeIf('`view.name`', `['some' => 'data']`)  |
+| **when**	_or_ **includewhen** | @includeWhen('`condition`', '`view.name`', `['some' => 'data']`)  |
 | **par**	_or_ **parent**	| @parent	|
 | **route**		| {!! route('`name`') !!}	|
 | **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
