@@ -1,11 +1,11 @@
-#Blade templating snippets for Atom
+# Blade templating snippets for Atom
 
 Laravel 5 blade snippets! useful snippets for the Blade Templating Engine to use in Atom.
 
 Converted from [blade-snippets for sublime](https://github.com/dev4dev/blade-snippets)
 using the [sublime to atom](https://github.com/james2doyle/sublime-to-atom-snippets) script.
 
-##Usage
+## Usage
 
 These snippets will trigger only in `*.blade.php` files.
 
@@ -17,7 +17,7 @@ Checkout the [Available blade snippets.](#available-snippets)
 
 I recommend [this Blade language Package for Atom](https://atom.io/packages/language-blade) to be able to take full advantage of the Blade Templating Engine in this amazing editor.
 
-##Available snippets
+## Available snippets
 
 | Shortcut  | Result |
 |-----------|--------|
@@ -45,7 +45,7 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **comment** _or_ **//**	| {{-- `comment` --}}	|
 
 
-##Disclaimer
+## Disclaimer
 
 Feel free to contribute!
 
