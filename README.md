@@ -21,28 +21,32 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 
 | Shortcut  | Result |
 |-----------|--------|
-| **}}** _or_ **echo** _or_	**print**	| {{ `$var` }} |
 | **!!**	_or_ **uecho** _or_	**uprint** | {!! `$var` !!}	|
-| **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
-| **sshow**	_or_ **secs** | @section('`name`') <br /><br /> @show |
-| **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
-| **ext**	_or_ **extends** | @extends('`name`')	|
-| **yl** _or_ **yield**	| @yield('`section`') |
-| **par**	_or_ **parent**	| @parent	|
-| **if**	| @if (`condition`) <br /><br /> @endif   |
-| **ife**	| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
-| **for**		| @for (`$i` = `0`; `$i` `<` `…`; `$i++`) <br /><br /> @endfor  |
-| **while**		| @while (`condition`) <br /><br /> @endwhile  |
-| **un** _or_ **unless** | @unless (`condition`) <br /><br /> @endunless  |
-| **fea** _or_ **foreach** | @foreach(`$array` as `$element`) <br /><br /> @endforeach |
-| **fel** _or_ **forelse**| @forelse (`$array` as `$element`) <br /><br /> @endforelse  |
-| **each** | @each ('`item.view`', $`items`, '`item`', '`empty.view`')
-| **trans**		| {!! trans('`language.line`') !!}	|
-| **route**		| {!! route('`name`') !!}	|
-| **asset**		| {!! asset('`path`') !!}	|
+| **}}** _or_ **echo** _or_	**print**	| {{ `$var` }} |
 | **action**	| {!! link_to_action('`Controller@method`') !!}	|
+| **asset**		| {!! asset('`path`') !!}	|
+| **auth**		| @auth('`gate`')<br /><br /> @endauth  |
 | **choice**	| @choice('`language.line`', $`number`)  |
 | **comment** _or_ **//**	| {{-- `comment` --}}	|
+| **each** | @each ('`item.view`', $`items`, '`item`', '`empty.view`')
+| **ext**	_or_ **extends** | @extends('`name`')	|
+| **fea** _or_ **foreach** | @foreach(`$array` as `$element`) <br /><br /> @endforeach |
+| **fel** _or_ **forelse**| @forelse (`$array` as `$element`) <br /><br /> @endforelse  |
+| **for**		| @for (`$i` = `0`; `$i` `<` `…`; `$i++`) <br /><br /> @endfor  |
+| **guest**		| @guest('`gate`')<br /><br /> @endguest  |
+| **if**	| @if (`condition`) <br /><br /> @endif   |
+| **ife**	| @if (`condition`) <br /><br /> @else <br /><br /> @endif  |
+| **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
+| **incif**	_or_ **includeif** | @includeIf('`view.name`', `['some' => 'data']`)  |
+| **when**	_or_ **includewhen** | @includeWhen('`condition`', '`view.name`', `['some' => 'data']`)  |
+| **par**	_or_ **parent**	| @parent	|
+| **route**		| {!! route('`name`') !!}	|
+| **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
+| **sshow**	_or_ **secs** | @section('`name`') <br /><br /> @show |
+| **trans**		| {!! trans('`language.line`') !!}	|
+| **un** _or_ **unless** | @unless (`condition`) <br /><br /> @endunless  |
+| **while**		| @while (`condition`) <br /><br /> @endwhile  |
+| **yl** _or_ **yield**	| @yield('`section`') |
 
 
 ## Disclaimer
