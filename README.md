@@ -9,7 +9,7 @@ using the [sublime to atom](https://github.com/james2doyle/sublime-to-atom-snipp
 
 These snippets will trigger only in `*.blade.php` files.
 
-Type any snippet and hit TAB to receive incredible results!.
+Type any snippet and hit TAB to receive incredible results!
 
 echo + TAB = {{ `$var` }}
 
@@ -39,6 +39,7 @@ I recommend [this Blade language Package for Atom](https://atom.io/packages/lang
 | **inc**	_or_ **include** | @include('`view.name`', `['some' => 'data']`)  |
 | **incif**	_or_ **includeif** | @includeIf('`view.name`', `['some' => 'data']`)  |
 | **when**	_or_ **includewhen** | @includeWhen('`condition`', '`view.name`', `['some' => 'data']`)  |
+| **json**  | @json(`$expression`, `$options`, `$depth`)  |
 | **par**	_or_ **parent**	| @parent	|
 | **route**		| {!! route('`name`') !!}	|
 | **sec**	_or_ **section** | @section('`name`') <br /><br /> @endsection |
